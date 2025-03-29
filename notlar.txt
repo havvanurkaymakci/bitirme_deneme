@@ -1,0 +1,17 @@
+PS D:\Bitirme Projesi> env\Scripts\activate
+
+
+yapılan değişikleri githuba push yapmak için: 
+git add .
+git commit -m "Backend ile ilgili değişiklikler yapıldı"
+(hangi branch ise ona push yapıyoruz) 
+
+ bu satır backend/backend/urls.py bu dizine eklenecek
+path("api/", include("api.urls")),
+
+*****************************************************
+BAZI BİLGİLER 
+
+Access Token, kullanıcının kimliğini doğrular ve API isteklerinde kullanılır.
+
+Refresh Token, access token süresi dolduğunda kullanıcıya yeni bir access token sağlar.
