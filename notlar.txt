@@ -9,9 +9,13 @@ git commit -m "Backend ile ilgili değişiklikler yapıldı"
  bu satır backend/backend/urls.py bu dizine eklenecek
 path("api/", include("api.urls")),
 
+github push için 
+git push -u origin frontend : frontend branch push yapar
+
 *****************************************************
 BAZI BİLGİLER 
 
 Access Token, kullanıcının kimliğini doğrular ve API isteklerinde kullanılır.
 
 Refresh Token, access token süresi dolduğunda kullanıcıya yeni bir access token sağlar.
+
