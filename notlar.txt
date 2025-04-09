@@ -1,4 +1,4 @@
-PS D:\Bitirme Projesi> env\Scripts\activate
+PS D:\Bitirme Projesi> venv\Scripts\activate
 
 
 yapılan değişikleri githuba push yapmak için: 
@@ -19,3 +19,6 @@ Access Token, kullanıcının kimliğini doğrular ve API isteklerinde kullanıl
 
 Refresh Token, access token süresi dolduğunda kullanıcıya yeni bir access token sağlar.
 
+postgresql 
+username : myuser 
+şifre: mypw123 
