@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from rest_framework import generics
-from .serializers import UserSerializer, NoteSerializer
+from .serializers import UserSerializer, NoteSerializer,UserProfileSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .models import Note
+from .models import UserProfile
 
 
 class NoteListCreate(generics.ListCreateAPIView):
@@ -34,3 +35,14 @@ class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
+
+
+# UserProfile'ı görüntülemek için
+class UserProfileView(generics.RetrieveUpdateAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated]  # Yalnızca giriş yapmış kullanıcılar erişebilir.
+
+    def get_object(self):
+        # Kullanıcıya ait UserProfile'ı döndürür
+        return self.request.user.profile  # assuming 'profile' is the related_name for the OneToOne field

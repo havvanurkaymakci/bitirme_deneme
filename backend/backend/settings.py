@@ -103,8 +103,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # PostgreSQL kullanıyoruz
+        'NAME': 'bitirme',  # Veritabanı adınız
+        'USER': 'postgres',  # Veritabanı kullanıcı adınız
+        'PASSWORD': 'admin123',  # Veritabanı şifreniz
+        'HOST': 'localhost',  # Veritabanının bulunduğu sunucu, genellikle localhost
+        'PORT': '5432',  # PostgreSQL için varsayılan port
     }
 }
 
