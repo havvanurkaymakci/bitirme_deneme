@@ -32,7 +32,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CORS_ALLOW_ALL_ORIGINS = True
+#CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # React frontend'in çalıştığı port
+]
+
 CORS_ALLOW_CREDENTIALS = True
 
 
@@ -101,16 +105,27 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.postgresql',  # PostgreSQL kullanıyoruz
         'NAME': 'bitirme',  # Veritabanı adınız
         'USER': 'postgres',  # Veritabanı kullanıcı adınız
         'PASSWORD': 'admin123',  # Veritabanı şifreniz
         'HOST': 'localhost',  # Veritabanının bulunduğu sunucu, genellikle localhost
         'PORT': '5432',  # PostgreSQL için varsayılan port
+=======
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bitirme',
+        'USER': 'postgres',
+        'PASSWORD': 'admin123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+>>>>>>> frontend
     }
 }
+
 
 
 # Password validation
